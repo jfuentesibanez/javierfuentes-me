@@ -123,6 +123,14 @@ const FACTS = {
     es: "Escribo The Independent Sentinel: IA, curiosidades e historias. -> https://theindependentsentinel.substack.com",
     en: "I write The Independent Sentinel: AI, curiosities and stories. -> https://theindependentsentinel.substack.com",
   },
+  codeback: {
+    es: "Codeback Software (2013): mi primera empresa. Todo empezo escribiendo codigo.",
+    en: "Codeback Software (2013): my first company. It all started by writing code.",
+  },
+  akoios: {
+    es: "Akoios: una de las startups que cofunde, llevando modelos a produccion.",
+    en: "Akoios: one of the startups I co-founded, taking models to production.",
+  },
 };
 
 function fact(name) {
@@ -171,6 +179,8 @@ export const COMMANDS = {
   pompeii: fact("pompeya"),
   sentinel: fact("sentinel"),
   newsletter: fact("sentinel"),
+  codeback: fact("codeback"),
+  akoios: fact("akoios"),
   vibe,
 };
 

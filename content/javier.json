@@ -1,65 +1,104 @@
 {
-  "name": "Javier Fuentes",
+  "name": "Javier Fuentes Ibáñez",
   "handle": "javier",
   "host": "javierfuentes.me",
   "about": {
     "es": [
-      "Consultor de IA y socio en NCompany, una boutique de inteligencia artificial",
-      "con sede en Madrid. Ayudo a equipos directivos a entender la IA y aplicarla",
-      "de forma estrategica: keynotes, formacion a medida y consultoria.",
+      "Javier Fuentes Ibáñez — ingeniero de Telecomunicación, emprendedor,",
+      "consultor y profesor. Más de 20 años en la intersección de tecnología,",
+      "negocio y emprendimiento.",
       "",
-      "He dado mas de 450 charlas a mas de 125.000 personas, en organizaciones como",
-      "BBVA, Mapfre y Telefonica. Mi obsesion: traducir lo complejo en algo util y claro.",
+      "Socio y cofundador de N Company: ayudo a grandes empresas e instituciones",
+      "a adoptar IA, crear nuevos modelos de negocio y construir innovación",
+      "medible. He trabajado con Santander, CaixaBank, Ferrovial, Acciona,",
+      "Roche, Bayer, AXA, Swiss Re, PwC, Deloitte y muchas más.",
       "",
-      "Esta web es mi rincon hacker. La de la empresa esta en https://ncompany.es"
+      "Antes: 8+ años en Defensa y Aeroespacial (Ministerio de Defensa, Agencia",
+      "Europea de Defensa, ESA, OTAN). En 2013 fundé Codeback Software; después",
+      "cofundé Akoios y otras startups.",
+      "",
+      "Profesor asociado en la Universidad Pontificia Comillas ICAI y ex-profesor",
+      "de IA en la UCJC. Formación en M&A y Private Equity por el IEB.",
+      "",
+      "Desde 2019 escribo The Independent Sentinel, mi newsletter sobre IA.",
+      "",
+      "Mi trabajo: traducir lo complejo en algo útil, y convertir la innovación",
+      "en proyectos reales, medibles y sostenibles.",
+      "",
+      "Esta web es mi rincón hacker. La empresa esta en https://ncompany.es"
     ],
     "en": [
-      "AI consultant and partner at NCompany, an artificial-intelligence boutique",
-      "based in Madrid. I help executive teams understand AI and apply it",
-      "strategically: keynotes, custom training and consulting.",
+      "Javier Fuentes Ibáñez — telecom engineer, entrepreneur, consultant and",
+      "professor. 20+ years at the intersection of technology, business and",
+      "entrepreneurship.",
       "",
-      "I've given 450+ talks to 125,000+ people at organizations like",
-      "BBVA, Mapfre and Telefonica. My obsession: turning the complex into",
-      "something useful and clear.",
+      "Partner and co-founder of N Company: I help large companies and",
+      "institutions adopt AI, build new business models and create measurable",
+      "innovation. I've worked with Santander, CaixaBank, Ferrovial, Acciona,",
+      "Roche, Bayer, AXA, Swiss Re, PwC, Deloitte and many more.",
+      "",
+      "Before that: 8+ years in Defense and Aerospace (Spanish MoD, European",
+      "Defence Agency, ESA, NATO). In 2013 I founded Codeback Software; later",
+      "I co-founded Akoios and other startups.",
+      "",
+      "Associate professor at Universidad Pontificia Comillas ICAI and former",
+      "AI professor at UCJC. Trained in M&A and Private Equity at IEB.",
+      "",
+      "Since 2019 I write The Independent Sentinel, my newsletter about AI.",
+      "",
+      "My work: turning the complex into something useful, and turning innovation",
+      "into real, measurable, sustainable projects.",
       "",
       "This site is my hacker corner. The company lives at https://ncompany.es"
     ]
   },
   "interests": {
     "es": [
-      "- Inteligencia artificial: noticias, curiosidades e historias",
-      "- Paradojas tecnologicas y economicas (la de Jevons es de las favoritas)",
-      "- Fisica y matematicas: el problema de Navier-Stokes, lo (in)computable",
-      "- Filosofia de la tecnologia y su impacto en lo humano",
+      "- IA generativa aplicada: agentes, RAG, automatización, asistentes corporativos",
+      "- Innovación corporativa medible: hipótesis, experimentos, validación",
+      "- Emprendimiento tecnológico y nuevos modelos de negocio",
+      "- Estrategia y finanzas (M&A, Private Equity)",
+      "- Defensa, aeroespacial y procesamiento de señales (mi primera vida)",
+      "- Paradojas tecnológicas y económicas (la de Jevons es de las favoritas)",
+      "- Física y matemáticas: Navier-Stokes, lo (in)computable",
       "- Historia y cultura: Pompeya, los dioses de arena, el sprint infinito",
-      "- Vibe coding y la artesania de construir cosas",
-      "- Retrofuturismo y estetica de terminal (obviamente)"
+      "- Vibe coding y la artesanía de construir cosas"
     ],
     "en": [
-      "- Artificial intelligence: news, curiosities and stories",
+      "- Applied generative AI: agents, RAG, automation, corporate assistants",
+      "- Measurable corporate innovation: hypotheses, experiments, validation",
+      "- Tech entrepreneurship and new business models",
+      "- Strategy and finance (M&A, Private Equity)",
+      "- Defense, aerospace and signal processing (my first life)",
       "- Technological and economic paradoxes (Jevons is a favorite)",
-      "- Physics and maths: the Navier-Stokes problem, the (in)computable",
-      "- Philosophy of technology and its impact on what's human",
+      "- Physics and maths: Navier-Stokes, the (in)computable",
       "- History and culture: Pompeii, the sand gods, the infinite sprint",
-      "- Vibe coding and the craft of building things",
-      "- Retrofuturism and terminal aesthetics (obviously)"
+      "- Vibe coding and the craft of building things"
     ]
   },
   "publications": {
     "es": [
-      "The Independent Sentinel — mi newsletter sobre IA:",
-      "noticias, curiosidades e historias. 60+ ediciones.",
+      "The Independent Sentinel — mi newsletter sobre IA (desde 2019):",
+      "evolución de la IA, modelos generativos, AGI y su impacto económico y social.",
       "  https://theindependentsentinel.substack.com",
       "",
-      "Tambien escribo y doy charlas con NCompany:",
+      "Docencia:",
+      "  Univ. Pontificia Comillas ICAI — profesor asociado (emprendimiento e innovación)",
+      "  Universidad Camilo José Cela — ex-profesor de IA",
+      "",
+      "Consultoría y formación con N Company:",
       "  https://ncompany.es"
     ],
     "en": [
-      "The Independent Sentinel — my newsletter about AI:",
-      "news, curiosities and stories. 60+ editions.",
+      "The Independent Sentinel — my newsletter about AI (since 2019):",
+      "AI evolution, generative models, AGI and their economic and social impact.",
       "  https://theindependentsentinel.substack.com",
       "",
-      "I also write and speak with NCompany:",
+      "Teaching:",
+      "  Univ. Pontificia Comillas ICAI — associate professor (entrepreneurship & innovation)",
+      "  Universidad Camilo José Cela — former AI professor",
+      "",
+      "Consulting and training with N Company:",
       "  https://ncompany.es"
     ]
   },
@@ -80,5 +119,18 @@
       "linkedin   [TODO: handle]",
       "x          [TODO: handle]"
     ]
-  }
+  },
+  "bio": [
+    "Javier Fuentes Ibáñez es ingeniero de Telecomunicación, emprendedor, consultor y profesor especializado en inteligencia artificial, innovación corporativa, estrategia tecnológica y creación de nuevos modelos de negocio. Más de dos décadas de trayectoria en la intersección entre ingeniería, tecnología, empresa y emprendimiento.",
+    "Actualmente es socio y cofundador de N Company, firma desde la que trabaja con grandes corporaciones, instituciones y equipos directivos en proyectos de transformación, innovación e IA. Diseña y dirige programas de formación, sesiones ejecutivas, talleres de innovación y consultoría sobre IA generativa, automatización, analítica avanzada, transformación digital y diseño de nuevos productos y servicios. Enfoque práctico: divulgación, experimentación y estrategia, no teoría pura.",
+    "Ha colaborado con compañías de banca, seguros, energía, infraestructuras, industria, salud, consultoría, defensa, movilidad y gran consumo: Ferrovial, Acciona, Gestamp, Deloitte, Bayer, Roche, Astellas, Almirall, AXA, Santander, CaixaBank, Renta 4, Enagás, Serveo, Hyundai, Swiss Re y PwC, entre otras.",
+    "Su visión: la IA no es solo una herramienta, sino un cambio profundo en cómo trabajar, competir, investigar y decidir. Sus programas integran estrategia, capacitación, casos de uso, experimentación, gobernanza, impacto organizativo y cambio cultural.",
+    "Trayectoria previa en Defensa y Aeroespacial (8+ años): proyectos del Ministerio de Defensa y colaboración con la Agencia Europea de Defensa, la Agencia Espacial Europea (ESA) y la OTAN. Trabajó en instrumentación electrónica, adquisición y procesamiento de señales, sistemas de alta velocidad, análisis de datos, investigación operativa, plataformas aéreas no tripuladas y sistemas colaborativos. Dirección y coordinación técnica de proyectos, diseño de soluciones y autoría de trabajos científico-técnicos en programas europeos de defensa y espacio.",
+    "Emprendedor desde hace más de una década. En 2013 fundó Codeback Software. Ha creado y participado en varias startups (software, plataformas digitales, IA, modelos de negocio basados en datos). Cofundó Akoios. Aplica metodologías de emprendimiento —experimentación, validación de hipótesis, prototipado, aprendizaje rápido— a la innovación corporativa. Formación adicional en M&A y Private Equity por el IEB.",
+    "Docencia: profesor asociado en la Universidad Pontificia Comillas ICAI (emprendimiento, innovación, creación de empresas) y ex-profesor de IA en la Universidad Camilo José Cela. Temas: IA generativa, innovación corporativa, emprendimiento tecnológico, diseño y validación de modelos de negocio, Customer Development, Business Model Canvas, Value Proposition Canvas, analítica de datos, automatización, estrategia tecnológica y nuevas formas de trabajo con IA. Enfoque muy práctico, con casos, herramientas y prototipos reales.",
+    "IA aplicada: diseña flujos de trabajo, sistemas de conocimiento, agentes, automatizaciones y asistentes especializados. Trabaja con ChatGPT, Claude, Gemini, Microsoft Copilot, Perplexity, Elicit, Consensus, Scite, ResearchRabbit, OpenEvidence, y con LLMs, RAG, agentes inteligentes, modelos locales, LangChain y orquestación. Le interesa qué tareas pueden aumentarse o transformarse con IA y cómo rediseñar procesos para que la adopción dé resultados sostenibles.",
+    "Innovación corporativa: ayuda a pasar de las ideas a un sistema de innovación estructurado y medible, partiendo de hipótesis claras y falsables y diseñando experimentos antes de grandes inversiones. Trabaja estrategias de innovación, priorización de oportunidades, carteras de casos de uso de IA, validación de modelos de negocio, intraemprendimiento, hojas de ruta de transformación y gobernanza de IA.",
+    "Desde 2019 publica The Independent Sentinel, newsletter en español sobre IA, tecnología y transformación económica: modelos generativos, AGI, competencia entre tecnológicas e implicaciones económicas, sociales y estratégicas. Combina divulgación, análisis y reflexión, traduciendo lo técnico-complejo en ideas comprensibles sin perder rigor.",
+    "Perfil: ingeniero con experiencia en investigación internacional, sector defensa/aeroespacial, fundador de empresas, especialista en innovación corporativa e IA aplicada, con formación financiera (M&A, PE) y experiencia docente. Actúa como puente entre tecnología y negocio: habla con equipos de ingeniería y datos, y traslada las implicaciones a estrategia, operaciones y dirección general."
+  ]
 }

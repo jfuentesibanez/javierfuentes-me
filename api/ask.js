@@ -24,6 +24,7 @@ function getContent() {
 function buildSystemPrompt(lang) {
   const c = getContent();
   const flat = (k) => [...(c[k]?.es || []), ...(c[k]?.en || [])].join("\n");
+  const bio = Array.isArray(c.bio) ? c.bio.join("\n\n") : "";
   const langName = lang === "en" ? "English" : "Spanish";
   return `You are the in-terminal assistant on Javier Fuentes' personal website (javierfuentes.me), a retro green-phosphor CRT terminal.
 
@@ -38,7 +39,10 @@ Rules:
 
 What you know about Javier (source of truth):
 
-ABOUT:
+FULL BIO:
+${bio}
+
+ABOUT (short):
 ${flat("about")}
 
 INTERESTS:
