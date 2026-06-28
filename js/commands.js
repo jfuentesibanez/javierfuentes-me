@@ -72,10 +72,19 @@ function theme(args, term) {
 
 // --- Easter eggs (ocultos, no salen en `help`) ---
 
+function coffee(_args, term) {
+  term.println(
+    term.lang === "en"
+      ? "☕❌ plot twist: Javier never drinks coffee. this machine runs on pure curiosity. try 'fortune'."
+      : "☕❌ giro de guion: Javier nunca toma cafe. esta maquina funciona a pura curiosidad. prueba 'fortune'.",
+    "bright"
+  );
+}
+
 function sudo(args, term) {
   const joined = args.join(" ").toLowerCase();
   if (joined.includes("coffee")) {
-    term.println("☕ permission denied: you are not root (but nice try)");
+    return coffee(args, term);
   } else {
     term.println("we trust you have received the usual lecture from the", "muted");
     term.println("local System Administrator. password:", "muted");
@@ -107,14 +116,14 @@ const DOTFILES = {
   ".bashrc": {
     es: [
       "# ~/.bashrc",
-      "alias coffee='sudo make me a coffee'",
+      "alias coffee='echo \"Javier no toma cafe\"'   # de verdad, nunca",
       "alias think='ask'",
       "# tip: hay comandos sin documentar -> neofetch, tree, fortune, cowsay, hack",
       "# y un viejo truco de consola: el codigo Konami ↑↑↓↓←→←→ B A",
     ],
     en: [
       "# ~/.bashrc",
-      "alias coffee='sudo make me a coffee'",
+      "alias coffee='echo \"Javier never drinks coffee\"'   # really, never",
       "alias think='ask'",
       "# tip: there are undocumented commands -> neofetch, tree, fortune, cowsay, hack",
       "# and an old console trick: the Konami code ↑↑↓↓←→←→ B A",
@@ -228,7 +237,7 @@ function date_(_args, term) {
 
 function uname(args, term) {
   if (args.includes("-a")) {
-    term.println("JavierOS 4.8 phosphor x86_64 GNU/Caffeine #1 SMP retro");
+    term.println("JavierOS 4.8 phosphor x86_64 GNU/Curiosity #1 SMP retro");
   } else {
     term.println("JavierOS");
   }
@@ -237,8 +246,8 @@ function uname(args, term) {
 function uptime(_args, term) {
   term.println(
     term.lang === "en"
-      ? " up 20+ years,  1 user,  load average: ideas, coffee, curiosity"
-      : " up 20+ anos,  1 usuario,  carga media: ideas, cafe, curiosidad",
+      ? " up 20+ years,  1 user,  load average: ideas, curiosity, momentum"
+      : " up 20+ anos,  1 usuario,  carga media: ideas, curiosidad, impulso",
     "muted"
   );
 }
@@ -275,7 +284,7 @@ function neofetch(_args, term) {
     "       \\_/ \\_/       Host:    javierfuentes.me",
     "        `-'-'        Shell:   js-sh 1.0",
     "                     Uptime:  20+ years in tech",
-    "                     CPU:     caffeine-powered",
+    "                     CPU:     curiosity-powered (no coffee, ever)",
     "                     Memory:  enough / plenty",
     "                     Role:    AI consultant @ N Company",
     "                     Theme:   green phosphor",
@@ -454,7 +463,7 @@ export const COMMANDS = {
   rm,
   man,
   xyzzy,
-  coffee: sudo,
+  coffee,
 };
 
 // Comandos que aparecen en autocompletado y sugerencias "did you mean".

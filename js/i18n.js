@@ -4,7 +4,7 @@ export const STRINGS = {
     booting: [
       "NCompany BIOS v4.8 — POST",
       "  CPU ........... Javier Fuentes [OK]",
-      "  RAM ........... cafeina suficiente [OK]",
+      "  RAM ........... curiosidad infinita [OK]",
       "  GPU ........... imaginacion [OK]",
       "  loading personality matrix ........ OK",
       "  mounting /interests /publications /bot ... OK",
@@ -45,7 +45,7 @@ export const STRINGS = {
     booting: [
       "NCompany BIOS v4.8 — POST",
       "  CPU ........... Javier Fuentes [OK]",
-      "  RAM ........... enough caffeine [OK]",
+      "  RAM ........... infinite curiosity [OK]",
       "  GPU ........... imagination [OK]",
       "  loading personality matrix ........ OK",
       "  mounting /interests /publications /bot ... OK",
