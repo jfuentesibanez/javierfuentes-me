@@ -1,0 +1,184 @@
+:root {
+  --phosphor: #33ff33;
+  --phosphor-dim: #1faa1f;
+  --phosphor-bright: #aaffaa;
+  --bg: #020402;
+  --glow: 0 0 4px rgba(51, 255, 51, 0.55), 0 0 11px rgba(51, 255, 51, 0.25);
+}
+
+/* Tema ambar (easter egg: `theme amber`) */
+.crt.amber {
+  --phosphor: #ffb000;
+  --phosphor-dim: #aa7400;
+  --phosphor-bright: #ffd27f;
+  --glow: 0 0 4px rgba(255, 176, 0, 0.55), 0 0 11px rgba(255, 176, 0, 0.25);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background: #000;
+  overflow: hidden;
+}
+
+body {
+  font-family: "VT323", "Courier New", monospace;
+}
+
+.crt {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, #061206 0%, var(--bg) 100%);
+  color: var(--phosphor);
+  text-shadow: var(--glow);
+  padding: 2.2vmin;
+  cursor: text;
+  animation: flicker 6s infinite steps(60);
+}
+
+/* Vignette + curvatura sutil de tubo */
+.crt::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse at center,
+    transparent 60%,
+    rgba(0, 0, 0, 0.55) 100%
+  );
+}
+
+.scanlines {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 0px,
+    rgba(0, 0, 0, 0) 2px,
+    rgba(0, 0, 0, 0.22) 3px,
+    rgba(0, 0, 0, 0.22) 3px
+  );
+  z-index: 5;
+  animation: scan 8s linear infinite;
+}
+
+.screen {
+  position: relative;
+  height: 100%;
+  overflow-y: auto;
+  font-size: clamp(18px, 2.6vmin, 26px);
+  line-height: 1.25;
+  z-index: 2;
+  scrollbar-width: thin;
+  scrollbar-color: var(--phosphor-dim) transparent;
+}
+
+.screen::-webkit-scrollbar {
+  width: 8px;
+}
+.screen::-webkit-scrollbar-thumb {
+  background: var(--phosphor-dim);
+}
+
+.output {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.line {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.line a,
+.output a {
+  color: var(--phosphor-bright);
+  text-decoration: underline;
+}
+
+.muted {
+  color: var(--phosphor-dim);
+}
+.bright {
+  color: var(--phosphor-bright);
+}
+.error {
+  color: #ff5555;
+  text-shadow: 0 0 4px rgba(255, 85, 85, 0.6);
+}
+
+.input-line {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.prompt {
+  color: var(--phosphor-bright);
+  flex-shrink: 0;
+}
+
+.cursor {
+  animation: blink 1s steps(1) infinite;
+}
+
+.input-line.hidden {
+  display: none;
+}
+
+/* input real: invisible pero capturando teclado/foco */
+#cmdline {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  opacity: 0;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes flicker {
+  0%,
+  97%,
+  100% {
+    opacity: 1;
+  }
+  98% {
+    opacity: 0.86;
+  }
+  99% {
+    opacity: 0.97;
+  }
+}
+
+@keyframes scan {
+  0% {
+    background-position-y: 0;
+  }
+  100% {
+    background-position-y: 100vh;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .crt,
+  .scanlines {
+    animation: none;
+  }
+  .cursor {
+    animation: blink 1s steps(1) infinite;
+  }
+}

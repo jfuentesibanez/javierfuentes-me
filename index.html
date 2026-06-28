@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>javierfuentes.me</title>
+  <meta name="description" content="Javier Fuentes — consultor de IA. Terminal personal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/css/crt.css" />
+</head>
+<body>
+  <div class="crt" id="crt">
+    <div class="scanlines" aria-hidden="true"></div>
+    <div class="screen" id="screen">
+      <div class="output" id="output"></div>
+      <div class="input-line" id="input-line">
+        <span class="prompt" id="prompt">javier@javierfuentes.me:~$&nbsp;</span><span class="input-mirror" id="input-mirror"></span><span class="cursor" id="cursor">█</span>
+      </div>
+    </div>
+    <input
+      type="text"
+      id="cmdline"
+      autocomplete="off"
+      autocapitalize="off"
+      autocorrect="off"
+      spellcheck="false"
+      aria-label="terminal input"
+    />
+  </div>
+  <script type="module" src="/js/terminal.js"></script>
+</body>
+</html>

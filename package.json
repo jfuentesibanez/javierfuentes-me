@@ -1,0 +1,14 @@
+{
+  "name": "javierfuentes-me",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Web personal de Javier Fuentes — terminal CRT de fosforo verde con bot Claude",
+  "type": "module",
+  "scripts": {
+    "dev": "vercel dev",
+    "deploy": "vercel --prod"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.40.0"
+  }
+}
