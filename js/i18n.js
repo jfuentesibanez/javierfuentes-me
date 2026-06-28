@@ -18,6 +18,7 @@ export const STRINGS = {
       "",
     ],
     helpTitle: "Comandos disponibles:",
+    helpHint: "psst... hay mas comandos de los que se listan aqui. los hackers de verdad exploran. prueba 'ls -a', 'neofetch', 'fortune'...",
     help: [
       ["help", "muestra esta ayuda"],
       ["about", "quien soy (alias: whoami)"],
@@ -58,6 +59,7 @@ export const STRINGS = {
       "",
     ],
     helpTitle: "Available commands:",
+    helpHint: "psst... there are more commands than the ones listed here. real hackers explore. try 'ls -a', 'neofetch', 'fortune'...",
     help: [
       ["help", "show this help"],
       ["about", "who I am (alias: whoami)"],

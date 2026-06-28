@@ -303,6 +303,34 @@ cmdline.addEventListener("keydown", async (e) => {
   }
 });
 
+// ---------- codigo Konami ----------
+
+const KONAMI = [
+  "ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown",
+  "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight",
+  "b", "a",
+];
+let konamiPos = 0;
+document.addEventListener("keydown", (e) => {
+  const key = e.key.length === 1 ? e.key.toLowerCase() : e.key;
+  if (key === KONAMI[konamiPos]) {
+    konamiPos++;
+    if (konamiPos === KONAMI.length) {
+      konamiPos = 0;
+      crt.classList.toggle("amber");
+      term.println(
+        term.lang === "en"
+          ? "🎮 KONAMI CODE ACCEPTED — god mode. (now try 'xyzzy')"
+          : "🎮 CODIGO KONAMI ACEPTADO — god mode. (ahora prueba 'xyzzy')",
+        "bright"
+      );
+      scrollDown();
+    }
+  } else {
+    konamiPos = key === KONAMI[0] ? 1 : 0;
+  }
+});
+
 // ---------- arranque ----------
 
 async function boot() {
