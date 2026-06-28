@@ -86,19 +86,41 @@ async function matrix(_args, term) {
   await term.matrixRain();
 }
 
+const SECTIONS = ["about", "interests", "publications", "contact"];
+
 function ls(_args, term) {
   term.println("about  interests  publications  contact  secret.txt", "muted");
 }
 
 function cat(args, term) {
-  const f = (args[0] || "").toLowerCase();
-  if (f === "secret.txt") {
+  const raw = (args[0] || "").toLowerCase();
+  const f = raw.replace(/\.txt$/, "");
+  if (raw === "secret.txt") {
     term.println("la mejor IA es la que te devuelve tiempo, no la que te lo roba.", "bright");
-  } else if (f) {
+  } else if (SECTIONS.includes(f)) {
+    return COMMANDS[f]([], term);
+  } else if (raw) {
     term.println(`cat: ${args[0]}: No such file or directory`, "error");
   } else {
     term.println("usage: cat <file>", "muted");
   }
+}
+
+async function cd(args, term) {
+  const target = (args[0] || "").toLowerCase().replace(/\/$/, "");
+  if (!target || target === "~" || target === ".." || target === "/" || target === ".") {
+    term.println(
+      term.lang === "en"
+        ? "you're already home. there's only one directory here :)"
+        : "ya estas en casa. aqui solo hay un directorio :)",
+      "muted"
+    );
+    return;
+  }
+  if (SECTIONS.includes(target)) {
+    return COMMANDS[target]([], term);
+  }
+  term.println(`cd: ${args[0]}: No such file or directory`, "error");
 }
 
 function exit(_args, term) {
@@ -169,6 +191,7 @@ export const COMMANDS = {
   matrix,
   ls,
   cat,
+  cd,
   exit,
   echo,
   // easter eggs tematicos (newsletter)
