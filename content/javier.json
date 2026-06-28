@@ -27,52 +27,58 @@
   },
   "interests": {
     "es": [
-      "- Inteligencia artificial aplicada e innovacion corporativa",
-      "- Retrofuturismo y estetica de terminal (obviamente)",
-      "- Filosofia y el impacto de la tecnologia en lo humano",
-      "- [PENDIENTE: Javier, dime tus intereses reales para afinar esto]"
+      "- Inteligencia artificial: noticias, curiosidades e historias",
+      "- Paradojas tecnologicas y economicas (la de Jevons es de las favoritas)",
+      "- Fisica y matematicas: el problema de Navier-Stokes, lo (in)computable",
+      "- Filosofia de la tecnologia y su impacto en lo humano",
+      "- Historia y cultura: Pompeya, los dioses de arena, el sprint infinito",
+      "- Vibe coding y la artesania de construir cosas",
+      "- Retrofuturismo y estetica de terminal (obviamente)"
     ],
     "en": [
-      "- Applied artificial intelligence and corporate innovation",
-      "- Retrofuturism and terminal aesthetics (obviously)",
-      "- Philosophy and the impact of technology on what's human",
-      "- [TODO: Javier, tell me your real interests to refine this]"
+      "- Artificial intelligence: news, curiosities and stories",
+      "- Technological and economic paradoxes (Jevons is a favorite)",
+      "- Physics and maths: the Navier-Stokes problem, the (in)computable",
+      "- Philosophy of technology and its impact on what's human",
+      "- History and culture: Pompeii, the sand gods, the infinite sprint",
+      "- Vibe coding and the craft of building things",
+      "- Retrofuturism and terminal aesthetics (obviously)"
     ]
   },
   "publications": {
     "es": [
-      "Newsletters y publicaciones de NCompany (mas alla de las presentaciones):",
-      "  - [PENDIENTE: titulo + enlace newsletter 1]",
-      "  - [PENDIENTE: titulo + enlace newsletter 2]",
-      "  - [PENDIENTE: titulo + enlace newsletter 3]",
+      "The Independent Sentinel — mi newsletter sobre IA:",
+      "noticias, curiosidades e historias. 60+ ediciones.",
+      "  https://theindependentsentinel.substack.com",
       "",
-      "Charlas y apariciones:",
-      "  - [PENDIENTE: enlaces a charlas/videos]"
+      "Tambien escribo y doy charlas con NCompany:",
+      "  https://ncompany.es"
     ],
     "en": [
-      "NCompany newsletters and writing (beyond the slides):",
-      "  - [TODO: title + link newsletter 1]",
-      "  - [TODO: title + link newsletter 2]",
-      "  - [TODO: title + link newsletter 3]",
+      "The Independent Sentinel — my newsletter about AI:",
+      "news, curiosities and stories. 60+ editions.",
+      "  https://theindependentsentinel.substack.com",
       "",
-      "Talks and appearances:",
-      "  - [TODO: links to talks/videos]"
+      "I also write and speak with NCompany:",
+      "  https://ncompany.es"
     ]
   },
   "contact": {
     "es": [
-      "email     javier@ncompany.es",
-      "empresa   https://ncompany.es",
-      "linkedin  [PENDIENTE: handle]",
-      "x         [PENDIENTE: handle]",
-      "github    [PENDIENTE: handle]"
+      "email      javier@ncompany.es",
+      "newsletter https://theindependentsentinel.substack.com",
+      "empresa    https://ncompany.es",
+      "github     https://github.com/jfuentesibanez",
+      "linkedin   [PENDIENTE: handle]",
+      "x          [PENDIENTE: handle]"
     ],
     "en": [
-      "email     javier@ncompany.es",
-      "company   https://ncompany.es",
-      "linkedin  [TODO: handle]",
-      "x         [TODO: handle]",
-      "github    [TODO: handle]"
+      "email      javier@ncompany.es",
+      "newsletter https://theindependentsentinel.substack.com",
+      "company    https://ncompany.es",
+      "github     https://github.com/jfuentesibanez",
+      "linkedin   [TODO: handle]",
+      "x          [TODO: handle]"
     ]
   }
 }

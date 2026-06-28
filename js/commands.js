@@ -105,6 +105,39 @@ function exit(_args, term) {
   term.println("nice try 🙂  (no hay salida de la matrix)");
 }
 
+// Easter eggs tematicos (sacados de la newsletter The Independent Sentinel).
+const FACTS = {
+  jevons: {
+    es: "Paradoja de Jevons: cuanto mas eficiente es usar un recurso, mas se consume. Spoiler: con la IA esta pasando justo eso.",
+    en: "Jevons paradox: the more efficient a resource gets, the more we consume it. Spoiler: it's happening with AI right now.",
+  },
+  navier: {
+    es: "Navier-Stokes: uno de los 7 problemas del milenio. Describimos el agua... pero no sabemos demostrar que la descripcion siempre funciona.",
+    en: "Navier-Stokes: one of the 7 millennium problems. We can describe water... but can't prove the description always holds.",
+  },
+  pompeya: {
+    es: "Pompeya quedo congelada en un instante. A veces la tecnologia hace lo mismo: fija un momento para siempre.",
+    en: "Pompeii was frozen in an instant. Technology sometimes does the same: it pins a moment forever.",
+  },
+  sentinel: {
+    es: "Escribo The Independent Sentinel: IA, curiosidades e historias. -> https://theindependentsentinel.substack.com",
+    en: "I write The Independent Sentinel: AI, curiosities and stories. -> https://theindependentsentinel.substack.com",
+  },
+};
+
+function fact(name) {
+  return (_args, term) => term.println(FACTS[name][term.lang] || FACTS[name].es, "bright");
+}
+
+function vibe(_args, term) {
+  term.println(
+    term.lang === "en"
+      ? "vibe coding detected. this whole terminal was built that way. 🛠️"
+      : "vibe coding detectado. esta terminal se construyo asi. 🛠️",
+    "bright"
+  );
+}
+
 function echo(args, term) {
   term.println(args.join(" "));
 }
@@ -130,6 +163,15 @@ export const COMMANDS = {
   cat,
   exit,
   echo,
+  // easter eggs tematicos (newsletter)
+  jevons: fact("jevons"),
+  navier: fact("navier"),
+  "navier-stokes": fact("navier"),
+  pompeya: fact("pompeya"),
+  pompeii: fact("pompeya"),
+  sentinel: fact("sentinel"),
+  newsletter: fact("sentinel"),
+  vibe,
 };
 
 // Comandos que aparecen en autocompletado y sugerencias "did you mean".
