@@ -1,0 +1,22 @@
+# javierfuentes.me
+
+> Web personal de Javier Fuentes Ibáñez: ingeniero, consultor y profesor de IA, socio de N Company y autor de The Independent Sentinel, newsletter de ensayos en español sobre inteligencia artificial, historia y futuro del trabajo (desde 2019).
+
+La web principal es una terminal interactiva hecha con JavaScript. Los archivos de esta lista son las mismas páginas en Markdown, pensadas para leerse sin ejecutar código.
+
+## Autor
+
+- [Sobre Javier Fuentes Ibáñez](https://javierfuentes.me/about.md): biografía, trabajo, trayectoria y perfiles.
+
+## The Independent Sentinel
+
+- [Índice de ensayos](https://javierfuentes.me/sentinel/index.md): qué es la newsletter y ensayos destacados.
+- [Nadie lo sabe (#62)](https://javierfuentes.me/sentinel/nadie-lo-sabe.md): IA y futuro de la consultoría.
+- [El mundo después de la economía (#61)](https://javierfuentes.me/sentinel/el-mundo-despues-de-la-economia.md): IA, trabajo, escasez y captura de valor.
+- [Los últimos días de Pompeya (#59)](https://javierfuentes.me/sentinel/los-ultimos-dias-de-pompeya.md): IA general y ruptura del contrato social.
+
+## Optional
+
+- [Newsletter en Substack](https://theindependentsentinel.substack.com)
+- [Archivo completo](https://theindependentsentinel.substack.com/archive)
+- [N Company](https://ncompany.es)

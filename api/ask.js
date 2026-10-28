@@ -21,6 +21,19 @@ function getContent() {
   return JAVIER;
 }
 
+// Fichas de ensayos de The Independent Sentinel (los mismos .md que sirve la web).
+let SENTINEL = null;
+function getSentinel() {
+  if (SENTINEL !== null) return SENTINEL;
+  const files = ["index.md", "nadie-lo-sabe.md", "el-mundo-despues-de-la-economia.md", "los-ultimos-dias-de-pompeya.md"];
+  try {
+    SENTINEL = files.map((f) => readFileSync(join(here, "..", "sentinel", f), "utf8")).join("\n\n---\n\n");
+  } catch {
+    SENTINEL = "";
+  }
+  return SENTINEL;
+}
+
 function buildSystemPrompt(lang) {
   const c = getContent();
   const flat = (k) => [...(c[k]?.es || []), ...(c[k]?.en || [])].join("\n");
@@ -52,7 +65,10 @@ PUBLICATIONS:
 ${flat("publications")}
 
 CONTACT:
-${flat("contact")}`;
+${flat("contact")}
+
+THE INDEPENDENT SENTINEL (essay index and summaries; recommend the essay that fits the visitor's interest and give its link):
+${getSentinel()}`;
 }
 
 // Rate-limiting basico, best-effort (memoria por instancia; las instancias son

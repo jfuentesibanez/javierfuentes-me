@@ -36,8 +36,93 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="/css/crt.css" />
+
+  <!-- Versiones legibles por maquinas (buscadores y agentes) -->
+  <link rel="alternate" type="text/markdown" href="/about.md" title="Sobre Javier Fuentes Ibáñez" />
+  <link rel="alternate" type="text/markdown" href="/sentinel/index.md" title="The Independent Sentinel: índice de ensayos" />
+  <link rel="alternate" type="application/rss+xml" href="https://theindependentsentinel.substack.com/feed" title="The Independent Sentinel" />
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://javierfuentes.me/#person",
+        "name": "Javier Fuentes Ibáñez",
+        "alternateName": "Javier Fuentes",
+        "url": "https://javierfuentes.me/",
+        "image": "https://javierfuentes.me/og.png",
+        "jobTitle": "Socio de N Company y profesor asociado",
+        "description": "Ingeniero de Telecomunicación, consultor y profesor de inteligencia artificial. Autor de The Independent Sentinel desde 2019.",
+        "worksFor": { "@type": "Organization", "name": "N Company", "url": "https://ncompany.es" },
+        "affiliation": { "@type": "CollegeOrUniversity", "name": "Universidad Pontificia Comillas ICAI" },
+        "knowsAbout": ["Inteligencia artificial", "Innovación corporativa", "Futuro del trabajo", "Emprendimiento", "Historia de la tecnología"],
+        "knowsLanguage": ["es", "en"],
+        "sameAs": [
+          "https://www.linkedin.com/in/jfuentesibanez/",
+          "https://x.com/jfuentesibanez",
+          "https://github.com/jfuentesibanez",
+          "https://theindependentsentinel.substack.com/about",
+          "https://vtconferenciantes.com/javier-fuentes/"
+        ]
+      },
+      {
+        "@type": "Periodical",
+        "@id": "https://theindependentsentinel.substack.com/#newsletter",
+        "name": "The Independent Sentinel",
+        "url": "https://theindependentsentinel.substack.com",
+        "inLanguage": "es",
+        "startDate": "2019",
+        "description": "Ensayos en español sobre inteligencia artificial, historia y futuro del trabajo.",
+        "author": { "@id": "https://javierfuentes.me/#person" },
+        "hasPart": [
+          {
+            "@type": "BlogPosting",
+            "headline": "Nadie lo sabe",
+            "about": "IA y futuro de la consultoría",
+            "datePublished": "2026-10-18",
+            "url": "https://theindependentsentinel.substack.com/p/the-independent-sentinel-62",
+            "author": { "@id": "https://javierfuentes.me/#person" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "El mundo después de la economía",
+            "about": "IA, trabajo y economía",
+            "datePublished": "2026-08-29",
+            "url": "https://theindependentsentinel.substack.com/p/the-independent-sentinel-61",
+            "author": { "@id": "https://javierfuentes.me/#person" }
+          },
+          {
+            "@type": "BlogPosting",
+            "headline": "Los últimos días de Pompeya",
+            "about": "IA y contrato social",
+            "datePublished": "2025-12-31",
+            "url": "https://theindependentsentinel.substack.com/p/the-independent-sentinel-59",
+            "author": { "@id": "https://javierfuentes.me/#person" }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
+  <noscript>
+    <main style="color:#33ff66;background:#020402;font-family:monospace;padding:2rem;max-width:72ch">
+      <h1>Javier Fuentes Ibáñez</h1>
+      <p>Ingeniero de Telecomunicación, consultor y profesor de inteligencia artificial. Socio de <a href="https://ncompany.es">N Company</a> y profesor asociado en la Universidad Pontificia Comillas ICAI.</p>
+      <p>Desde 2019 escribe <a href="https://theindependentsentinel.substack.com">The Independent Sentinel</a>, una newsletter de ensayos en español sobre inteligencia artificial, historia y futuro del trabajo.</p>
+      <h2>Ensayos destacados</h2>
+      <ul>
+        <li><a href="https://theindependentsentinel.substack.com/p/the-independent-sentinel-62">Nadie lo sabe</a>: IA y futuro de la consultoría.</li>
+        <li><a href="https://theindependentsentinel.substack.com/p/the-independent-sentinel-61">El mundo después de la economía</a>: IA, trabajo y economía.</li>
+        <li><a href="https://theindependentsentinel.substack.com/p/the-independent-sentinel-59">Los últimos días de Pompeya</a>: IA y contrato social.</li>
+      </ul>
+      <p>Más: <a href="/about.md">about.md</a> · <a href="/sentinel/index.md">sentinel/index.md</a> · <a href="/llms.txt">llms.txt</a></p>
+      <p>Esta web es una terminal interactiva: activa JavaScript para usarla.</p>
+    </main>
+  </noscript>
   <div class="crt" id="crt">
     <div class="scanlines" aria-hidden="true"></div>
     <div class="screen" id="screen">

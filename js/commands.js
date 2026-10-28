@@ -99,6 +99,45 @@ async function matrix(_args, term) {
 
 const SECTIONS = ["about", "interests", "publications", "contact"];
 
+// Ficheros reales: existen como URL estatica (para buscadores y agentes) y se
+// leen desde la terminal con `cat`. Una sola fuente, dos interfaces.
+const SENTINEL_FILES = [
+  "index.md",
+  "nadie-lo-sabe.md",
+  "el-mundo-despues-de-la-economia.md",
+  "los-ultimos-dias-de-pompeya.md",
+];
+const REAL_FILES = {
+  "about.md": "/about.md",
+  "llms.txt": "/llms.txt",
+  ...Object.fromEntries(SENTINEL_FILES.map((f) => [`sentinel/${f}`, `/sentinel/${f}`])),
+};
+
+function normPath(p) {
+  return (p || "").toLowerCase().replace(/^(~\/|\.\/|\/)+/, "");
+}
+
+async function catReal(path, term) {
+  try {
+    const res = await fetch(REAL_FILES[path]);
+    if (!res.ok) throw new Error(res.status);
+    const text = await res.text();
+    term.printLines(text.replace(/\r/g, "").split("\n"));
+  } catch {
+    term.println(`cat: ${path}: read error`, "error");
+  }
+}
+
+async function sentinel(_args, term) {
+  await catReal("sentinel/index.md", term);
+  term.println(
+    term.lang === "en"
+      ? "tip: ls sentinel  ·  cat sentinel/<essay>.md"
+      : "tip: ls sentinel  ·  cat sentinel/<ensayo>.md",
+    "muted"
+  );
+}
+
 // Ficheros "ocultos" para la caza del tesoro (se ven con `ls -a`).
 const DOTFILES = {
   ".secret": {
@@ -137,16 +176,29 @@ const DOTFILES = {
 
 function ls(args, term) {
   const all = args.includes("-a") || args.includes("-la") || args.includes("-al");
+  const dir = normPath(args.find((a) => !a.startsWith("-"))).replace(/\/$/, "");
+  if (dir === "sentinel") {
+    term.println(SENTINEL_FILES.join("  "), "muted");
+    return;
+  }
+  if (dir) {
+    term.println(`ls: ${dir}: No such file or directory`, "error");
+    return;
+  }
   if (all) {
     term.println(".  ..  .bashrc  .secret  .ssh", "muted");
   }
-  term.println("about  interests  publications  contact  secret.txt", "muted");
+  term.println("about  interests  publications  contact  secret.txt  about.md  llms.txt  sentinel/", "muted");
 }
 
 function cat(args, term) {
-  const raw = (args[0] || "").toLowerCase();
+  const raw = normPath(args[0]);
   const f = raw.replace(/\.txt$/, "");
-  if (raw === "secret.txt") {
+  if (REAL_FILES[raw]) {
+    return catReal(raw, term);
+  } else if (REAL_FILES["sentinel/" + raw]) {
+    return catReal("sentinel/" + raw, term);
+  } else if (raw === "secret.txt") {
     term.println("la mejor IA es la que te devuelve tiempo, no la que te lo roba.", "bright");
   } else if (DOTFILES[raw]) {
     term.printLines(DOTFILES[raw][term.lang] || DOTFILES[raw].es, "bright");
@@ -172,6 +224,9 @@ async function cd(args, term) {
   }
   if (SECTIONS.includes(target)) {
     return COMMANDS[target]([], term);
+  }
+  if (normPath(target) === "sentinel") {
+    return sentinel([], term);
   }
   term.println(`cd: ${args[0]}: No such file or directory`, "error");
 }
@@ -271,7 +326,11 @@ function tree(_args, term) {
     "├── interests",
     "├── publications",
     "├── contact",
-    "└── secret.txt",
+    "├── secret.txt",
+    "├── about.md",
+    "├── llms.txt",
+    "└── sentinel/",
+    ...SENTINEL_FILES.map((f, i) => (i === SENTINEL_FILES.length - 1 ? "    └── " : "    ├── ") + f),
   ]);
 }
 
@@ -388,7 +447,8 @@ function xyzzy(_args, term) {
 const MAN = {
   ask: "ask <pregunta> — pregunta cualquier cosa sobre Javier al bot (IA).",
   about: "about — quien es Javier. alias: whoami.",
-  ls: "ls [-a] — lista las secciones. con -a, tambien las ocultas.",
+  ls: "ls [-a] [sentinel] — lista las secciones. con -a, tambien las ocultas.",
+  sentinel: "sentinel — indice de ensayos de The Independent Sentinel (alias: newsletter).",
   cd: "cd <seccion> — entra en una seccion (about, interests, ...).",
   fortune: "fortune — una frase al azar.",
   hack: "hack — definitely hacks the planet.",
@@ -442,8 +502,8 @@ export const COMMANDS = {
   "navier-stokes": fact("navier"),
   pompeya: fact("pompeya"),
   pompeii: fact("pompeya"),
-  sentinel: fact("sentinel"),
-  newsletter: fact("sentinel"),
+  sentinel,
+  newsletter: sentinel,
   codeback: fact("codeback"),
   akoios: fact("akoios"),
   vibe,
@@ -474,6 +534,7 @@ export const PUBLIC_COMMANDS = [
   "interests",
   "publications",
   "writing",
+  "sentinel",
   "ask",
   "contact",
   "lang",

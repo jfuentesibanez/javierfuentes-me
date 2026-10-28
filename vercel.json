@@ -3,7 +3,7 @@
   "functions": {
     "api/ask.js": {
       "maxDuration": 30,
-      "includeFiles": "content/**"
+      "includeFiles": "{content,sentinel}/**"
     }
   }
 }
